@@ -129,30 +129,30 @@ body {
 }
 
 /* Estilos para el logo en móvil */
-.cabecera__logo__movil {
+.cabecera_movil_logo {
   width: 5rem; /* Ancho del logo */
 }
 
 /* Ocultamos la entrada del menú móvil */
-.menu__entrada__cabecera__movil {
+.cabecera__movil__entrada {
   display: none; /* Oculto */
 }
 
 /* Estilos para el icono del menú móvil */
 /* Su tamaño y color permiten una interacción fácil en pantallas pequeñas */
-.menu__cabecera__movil {
+.cabecera__movil__menu {
   font-size: 2rem; /* Tamaño grande para facilitar el toque */
   color: white;
   cursor: pointer; /* Indica que es interactivo */
 }
 
 /* Ocultamos la zona del menú móvil por defecto */
-.cabecera__zona__movil {
+.cabecera__movil__zona {
   display: none; /* Oculto */
 }
 
 /* Mostramos la zona del menú móvil al activar el checkbox */
-.menu__entrada__cabecera__movil:checked ~ .cabecera__zona__movil {
+.cabecera__movil__entrada:checked ~ .cabecera__movil__zona {
   display: flex; /* Mostramos el menú */
   flex-direction: column; /* Dirección en columna */
   gap: 1rem; /* Espacio entre elementos */
@@ -543,7 +543,7 @@ imagenes que estaban ocultas por el overflow*/
   flex-direction: column;
 }
 /*Definiendo tabla*/
-.devolucion__tabla {
+.tabla__devolucion {
   display: inline-block;
 
   border-collapse: collapse;
@@ -560,7 +560,7 @@ td {
 .motivos__listado {
   margin-left: 2rem;
 }
-.devoluciones__descripcion {
+.devolucion__informacion__descripcion {
   margin-left: 1rem;
 }
 /*Devoluciones proceso Seccion*/
@@ -572,7 +572,7 @@ td {
 .devolucion__proceso__formulario {
   margin-top: 1rem;
 }
-.devolucion__contenedor__formulario {
+.devolucion___proceso__formulario {
   margin-left: 1.4rem;
   display: flex;
   flex-direction: column;
@@ -583,20 +583,20 @@ td {
   border-radius: 0.6rem;
   align-items: center;
 }
-.formulario__ID__articulo {
+.devolucion__proceso__formulario__articulo {
   margin-bottom: 1rem;
 }
-.devolucion__selector {
+.devolucion__proceso__formulario__selector {
   margin-bottom: 1rem;
   background-color: var(--text-boton-sin-Pulsar);
   color: var(--backgrond-color);
   width: 70%;
 }
-.devolucion__label {
+.devolucion__proceso__formulario__label {
   font-size: 1.2rem;
   font-weight: bold;
 }
-.devolucion__boton {
+.devolucion__proceso__formulario__boton {
   margin-top: 1rem;
   background-color: var(--text-color);
   color: var(--backgrond-color);
@@ -605,12 +605,12 @@ td {
   transition: all ease 0.9s;
 }
 
-.devolucion__boton:hover {
+.devolucion__proceso__formulario__boton:hover {
   background: var(--backgrond-color);
   color: var(--text-color);
   transition: all ease 0.9s;
 }
-.devolucion__descripcion {
+.devolucion__proceso__formulario__descripcion {
   width: 70%;
   height: 40%;
 }
@@ -655,11 +655,11 @@ td {
     background-color: var(--cabeceraPie-color);
   }
 
-  .menu__entrada__cabecera__movil {
+  .cabecera__movil__entrada {
     display: none; /* Ocultamos por defecto */
   }
 
-  .cabecera__zona__movil {
+  .cabecera__movil__zona {
     display: none; /* Ocultamos por defecto */
     position: absolute; /* Posición absoluta */
     top: 60px; /* Debajo de la cabecera */
@@ -671,14 +671,14 @@ td {
     z-index: 100; /* Sobre otros elementos */
   }
 
-  .menu__cabecera__movil {
+  .cabecera__movil__menu {
     font-size: 2rem;
     color: white;
     cursor: pointer; /* Cambia el cursor al pasar */
     user-select: none; /* Evita la selección de texto */
   }
 
-  .menu__enlace__movil {
+  .movil__menu__enlace {
     color: white;
     text-decoration: none; /* Sin subrayado */
     margin: 0.5rem 0; /* Márgenes verticales */
@@ -686,17 +686,17 @@ td {
     margin-left: 2rem;
   }
 
-  .menu__enlace__movil:hover {
+  .movil__menu__enlace:hover {
     color: rgb(255, 132, 0);
     font-size: 1.2rem;
     text-decoration: underline;
   }
-  .cabecera__zona__menu__movil {
+  .movil__zona__menu {
     flex-direction: column;
     gap: 9px;
     list-style: none;
   }
-  .cabecera__zona__movil {
+  .cabecera__movil__zona {
     margin-top: 2.5rem;
     justify-content: space-between;
     align-items: center;
@@ -709,17 +709,17 @@ td {
     right: 20px;
     border-radius: 8px;
   }
-  .cabecera__zona__movil.show {
+  .cabecera__movil__zona.show {
     display: flex;
   }
 
-  .cabecera__zona__menu__movil a {
+  .movil__zona__menu a {
     text-decoration: none;
     color: var(--text-boton-sin-Pulsar);
     transition: all 0.3s ease;
   }
 
-  .cabecera__zona__menu__movil a:hover {
+  .movil__zona__menu a:hover {
     border-radius: 5px;
     color: var(--text-color);
   }

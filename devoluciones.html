@@ -38,19 +38,19 @@
 <header class="cabecera__movil">
     <a href="principal.html">
         <img
-                class="cabecera__logo__movil"
+                class="cabecera_movil_logo"
                 src="assets/img/logo.jpg"
                 alt="LOGO TIENDA"
         />
     </a>
-    <input type="checkbox" id="menu" class="menu__entrada__cabecera__movil" />
-    <label for="menu" class="menu__cabecera__movil">☰</label>
-    <nav class="cabecera__zona__movil">
-        <ul class="cabecera__zona__menu__movil">
-            <li><a class="menu__enlace__movil" href="principal.html">Inicio</a></li>
-            <li><a class="menu__enlace__movil" href="tienda.html">Tienda</a></li>
-            <li><a class="menu__enlace__movil" href="devoluciones.html">Devoluciones</a></li>
-            <li><a class="menu__enlace__movil" href="contacto.html">Contacto</a></li>
+    <input type="checkbox" id="menu" class="cabecera__movil__entrada" />
+    <label for="menu" class="cabecera__movil__menu">☰</label>
+    <nav class="cabecera__movil__zona">
+        <ul class="movil__zona__menu">
+            <li><a class="movil__menu__enlace" href="principal.html">Inicio</a></li>
+            <li><a class="movil__menu__enlace" href="tienda.html">Tienda</a></li>
+            <li><a class="movil__menu__enlace" href="devoluciones.html">Devoluciones</a></li>
+            <li><a class="movil__menu__enlace" href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
 </header>
@@ -59,14 +59,14 @@
     <section class="devoluciones">
         <article class="devoluciones__informacion">
             <h2>Política de devoluciones</h2>
-            <p class="devoluciones__descripcion">Nuestra política de devolución regula que el cliente podrá realizar una devolución de una compra realizada en un plazo de 30 días en caso de que la ropa no haya sido usada</p>
+            <p class="devolucion__informacion__descripcion">Nuestra política de devolución regula que el cliente podrá realizar una devolución de una compra realizada en un plazo de 30 días en caso de que la ropa no haya sido usada</p>
             <h2>Condición para realizar una devolución</h2>
-            <p class="devoluciones__descripcion">La prenda o articulo debe estar en perfecto estado y de ser posible no haber sido habierto el emboltorio que protege la prenda o árticulo</p>
-            <p class="devoluciones__descripcion">El plazo máximo es de 30 días desde que se realizó la compra</p>
+            <p class="devolucion__informacion__descripcion">La prenda o articulo debe estar en perfecto estado y de ser posible no haber sido habierto el emboltorio que protege la prenda o árticulo</p>
+            <p class="devolucion__informacion__descripcion">El plazo máximo es de 30 días desde que se realizó la compra</p>
         </article>
         <article class="devoluciones__motivos">
             <h3>Motivos</h3>
-            <p class="devoluciones__descripcion">Los motivos por los que se podrían realizar una devolución son los siguientes:</p>
+            <p class="devolucion__informacion__descripcion">Los motivos por los que se podrían realizar una devolución son los siguientes:</p>
             <ul class="motivos__listado">
                 <li>Defecto de fábrica</li>
                 <li>Talla incorrecta</li>
@@ -78,9 +78,9 @@
     <section class="devolucion__proceso">
         <h2>Proceso para solicitar devolución</h2>
         <article class="devolucion__proceso__informacion">
-            <p class="devoluciones__descripcion">El proceso para solicitar la devolución puede ser tanto contactando con atención al cliente o rellenando el siguiente formulario</p>
+            <p class="devolucion__informacion__descripcion">El proceso para solicitar la devolución puede ser tanto contactando con atención al cliente o rellenando el siguiente formulario</p>
             <article class="devolucion__proceso__atencionCliente">
-                <p class="devoluciones__descripcion">En caso de que usted desee contactar con atención al cliente siga los siguientes pasos:</p>
+                <p class="devolucion__informacion__descripcion">En caso de que usted desee contactar con atención al cliente siga los siguientes pasos:</p>
                 <ul class="atencionCliente__listado">
                     <li>Llamar al +34 999999999</li>
                     <li>Empaquetar el árticulo de forma que quede igual que ustéd lo compró</li>
@@ -91,24 +91,24 @@
         </article>
         <article class="devolucion__proceso__formulario">
             <h2>Formulario</h2>
-            <p class="devoluciones__descripcion">En caso de que prefiera realizar la devolución de forma online rellene el siguiente formulario</p>
+            <p class="devolucion__informacion__descripcion">En caso de que prefiera realizar la devolución de forma online rellene el siguiente formulario</p>
             <h2>Devoluciones</h2>
-            <form class="devolucion__contenedor__formulario">
+            <form class="devolucion___proceso__formulario">
                 <br>
-                <label for="devolucion__id" class="devolucion__label">ID del árticulo</label>
-                <input id="devolucion__id" class="formulario__ID__articulo" placeholder="Introduce el id del árticulo" type="text" required/>
+                <label for="devolucion__id" class="devolucion__proceso__formulario__label">ID del árticulo</label>
+                <input id="devolucion__id" class="devolucion__proceso__formulario__articulo" placeholder="Introduce el id del árticulo" type="text" required/>
 
-                <label for="devolucion__motivo" class="devolucion__label">Mótivo del reembolso</label>
-                <select id="devolucion__motivo" name="devolucion__motivo" class="devolucion__selector" required>
+                <label for="devolucion__motivo" class="devolucion__proceso__formulario__label">Mótivo del reembolso</label>
+                <select id="devolucion__motivo" name="devolucion__motivo" class="devolucion__proceso__formulario__selector" required>
                     <option value="">Seleccione un motivo</option>
                     <option value="defecto">Defecto de fábrica</option>
                     <option value="talla">Talla incorrecta</option>
                     <option value="mancha">Manchas en el árticulo</option>
                     <option value="color">Color no deseado</option>
                 </select>
-                <label for="devolucion__descripcion" class="devolucion__label">Descripción del reembolso</label>
-                <textarea id="devolucion__descripcion" class="devolucion__descripcion" placeholder="Escriba el mótivo de su reembolso, para poder entender mejor el motivo y mejorar nuestro servicio" required/></textarea>
-                <button type="submit" class="devolucion__boton">Enviar</button>
+                <label for="devolucion__descripcion" class="devolucion__proceso__formulario__label">Descripción del reembolso</label>
+                <textarea id="devolucion__descripcion" class="devolucion__proceso__formulario__descripcion" placeholder="Escriba el mótivo de su reembolso, para poder entender mejor el motivo y mejorar nuestro servicio" required></textarea>
+                <button type="submit" class="devolucion__proceso__formulario__boton">Enviar</button>
             </form>
         </article>
     </section>
@@ -120,8 +120,8 @@
         <article class="ayuda__tabla">
             <h2 class="tabla__titulo">Tabla de Tallas de Ropa</h2>
 
-            <table class="devolucion__tabla">
-                <thead class="tabla__cabecera">
+            <table class="tabla__devolucion">
+                <thead class="tabla__devolucion__cabecera">
                         <tr>
                             <th>Talla</th>
                             <th>Cadera (cm)</th>
@@ -195,7 +195,7 @@
         </article>
         <article class="ayuda__tabla">
             <h2 class="tabla__titulo">Tabla de Tallas de Calzado</h2>
-            <table class="devolucion__tabla">
+            <table class="tabla__devolucion">
                 <thead class="tabla__cabecera">
                 <tr>
                     <th>Talla</th>
