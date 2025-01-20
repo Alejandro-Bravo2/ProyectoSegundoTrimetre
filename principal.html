@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alejadnro Principal</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecera">
+        <a href="principal.html">
+            <img
+                    class="cabecera__logo"
+                    src="assets/img/logo.jpg"
+                    alt="LOGO TIENDA"
+            />
+        </a>
+        <article class="cabecera__zona">
+            <form class="cabecera__formulario">
+                <input
+                        class="formulario__input"
+                        type="text"
+                        placeholder="Buscar contenido..."
+                />
+                <button class="formulario__boton" type="submit">buscar</button>
+            </form>
+            <nav>
+                <ul class="cabecera__zona__menu">
+                    <li><a class="menu__enlace" href="principal.html">Inicio</a></li>
+                    <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
+                    <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
+                    <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+
+                </ul>
+            </nav>
+        </article>
+    </header>
+    <header class="cabecera__movil">
+        <a href="principal.html">
+            <img
+                    class="cabecera__logo__movil"
+                    src="assets/img/logo.jpg"
+                    alt="LOGO TIENDA"
+            />
+        </a>
+        <input type="checkbox" id="menu" class="menu__entrada__cabecera__movil" />
+        <label for="menu" class="menu__cabecera__movil">☰</label>
+        <nav class="cabecera__zona__movil">
+            <ul class="cabecera__zona__menu__movil">
+                <li><a class="menu__enlace__movil" href="principal.html">Inicio</a></li>
+                <li><a class="menu__enlace__movil" href="tienda.html">Tienda</a></li>
+                <li><a class="menu__enlace__movil" href="devoluciones.html">Devoluciones</a></li>
+                <li><a class="menu__enlace__movil" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!--PONER CATEGORIAS DE HOMBRE, MUJER, NIÑOS Y NIÑAS-->
+        <section class="principal">
+            <article class="principal__sobreNosotros">
+                <h2>Acerca de vistebarato</h2>
+                <p>Somos una compañía dedicada a la industria de la ropa.</p>
+                <p>Nos hemos impulsado a fundar esta compañia, ya que nosotros ofrecemos ropa de buena calidad y barata y para todas las edades y géneros. </p>
+                <br>
+                <h2>¿Como pagar?</h2>
+                <p>Se puede pagar con tarjetas de crédito o débito, ejemplo: Mastercard, BBVA, VISA,...</p>
+            </article>
+            <article class="principal__rebajas">
+                <br>
+                <h2 class="rebajas__titulo">Temporadas</h2>
+                <ul class="rebajas__lista">
+                    <li>Verano -> Desde 4 abril hasta 20 septiembre</li>
+                    <li>Otoño -> Desde 9 octumbre hasta 4 noviembre</li>
+                    <li>Invierno -> Desde 10 diciembre hasta 2 febrero</li>
+                    <li>Primavera -> Desde 1 marzo hasta 1 abril</li>
+                </ul>
+            </article>
+        </section>
+        <section class="productos">
+            <h2 class="productos__titulo">PRODUCTOS DESTACADOS</h2>
+            <article class="productos__listado">
+                <article class="listado__productos">
+                    <ul>
+                        <li><a href="http://localhost:63342/ProyectoSegundoTrimetre/tienda.html#link__sudaderas"><img src="assets/img/hombreCallejero.jpeg" alt="productos" class="productos__destacados__imagen" /></a></li> <!--PONER ENLACES EN TODAS LAS IMAGENES-->
+                        <li><a href="http://localhost:63342/ProyectoSegundoTrimetre/tienda.html#link__camisetas"><img src="assets/img/mujerFeliz.jpg" alt="productos" class="listado__productos__imagen"/></a></li>
+                        <li><a href="http://localhost:63342/ProyectoSegundoTrimetre/tienda.html#link__zapatos"><img src="assets/img/callejero.jpg" alt="productos" class="listado__productos__imagen" /></a></li>
+                        <li><a href="http://localhost:63342/ProyectoSegundoTrimetre/tienda.html#link__sudaderas"><img src="assets/img/Sudaderas.jpg" alt="productos" class="listado__productos__imagen" /></a></li>
+                    </ul>
+                </article>
+            </article>
+        </section>
+
+        <section class="generos">
+            <h2 class="generos__titulo">GENEROS</h2>
+            <article class="generos__imagenes">
+                <a href="http://localhost:63342/ProyectoSegundoTrimetre/tienda.html#ropa__destacada" class="categoria__genero__enlace" >
+                    <img src="assets/img/hombrePortada.webp" alt="hombreLink" class="genero__imagen"> <!--PONER FONDO DE VIÑETA Y QUE CUANDO PONGAS EL CURSOR ENCIMA QUE SE AUMENTE*-->
+                </a>
+                <a  href="http://localhost:63342/ProyectoSegundoTrimetre/tienda.html#ropa__destacada" class="categoria__genero__enlace">
+                    <img src="assets/img/mujerPortada.jpg" alt="mujerLink" class="genero__imagen">
+                </a>
+            </article>
+        </section>
+
+    </main>
+
+
+    <footer class="pie">
+        <p>&copy; 2024 Alejandro - Todos los derechos reservados</p>
+        <p>
+            <a href="principal.html" class="pie__enlace">Inicio</a> |
+            <a href="contacto.html" class="pie__enlace">Contacto</a>
+        </p>
+        <nav>
+            <ul class="pie__redes">
+                <li>
+                    <a href="https://www.instagram.com/" class="redes__icono">Instagram</a>
+                </li>
+                <li><a href="https://x.com/" class="redes__icono">Twitter</a></li>
+                <li>
+                    <a href="https://www.facebook.com/" class="redes__icono">Facebook</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,733 @@
+* {
+  margin: 0; /* Eliminamos márgenes */
+  padding: 0; /* Eliminamos rellenos */
+  box-sizing: border-box; /* Incluimos bordes y rellenos en el cálculo del ancho y alto */
+  font-family: Arial, sans-serif; /* Establecemos fuente por defecto */
+}
+
+:root {
+  /*Tema claro*/
+  --text-color: #000000;
+  --backgrond-color: #ffffff;
+  --bordes-color: #3e5bd3;
+  --text-boton-sin-Pulsar: #24334f;
+  --cabeceraPie-color: rgba(1, 19, 106, 0.63);
+
+  /*Tema oscuro*/
+  --background-principal-dark: #121212;
+  --text-principal-dark: #eeeeee;
+  --bordes-color-dark: #64b5f6;
+  --text-boton-sin-Pulsar-dark: #bbdefb;
+  --cabeceraPie-color-dark: #1e3a8a;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--backgrond-color);
+  font-size: 16px;
+}
+
+/* HEADER */
+/* Estilos para la cabecera principal, que es un contenedor flex que contiene el logo y la zona de menú */
+.cabecera {
+  width: 100%; /* Ancho completo para ocupar todo el espacio horizontal */
+  display: flex; /* Establece un contenedor flex */
+  justify-content: space-between; /* Distribuye los elementos (logo y zona) a los extremos */
+  align-items: center; /* Centra verticalmente los elementos dentro de la cabecera */
+  padding: 1rem 2rem; /* Relleno interno */
+  background: var(--cabeceraPie-color); /* Fondo negro */
+}
+
+/* Estilos para el logo en la cabecera */
+/* El logo tiene un ancho fijo y su tamaño no depende de otros elementos */
+.cabecera__logo {
+  width: 6rem; /* Ancho fijo del logo */
+}
+
+/* Estilos para la zona de la cabecera */
+/* Esta zona es un contenedor flex dentro de la cabecera que contiene el formulario y el menú */
+.cabecera__zona {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna (formulario encima del menú) */
+  align-items: flex-end; /* Alinea los elementos al final del eje horizontal (derecha) */
+  gap: 1rem; /* Espacio entre el formulario y el menú */
+}
+
+/* Estilos para el input del formulario */
+.formulario__input {
+  padding: 0.5rem; /* Relleno interno */
+  border: 2px solid var(--text-color); /* Borde amarillo */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente */
+  background: var(--text-boton-sin-Pulsar);
+  color: var(--backgrond-color);
+}
+
+/* Estilos al enfocar el input */
+.formulario__input:focus {
+  border-color: var(--bordes-color); /* Color del borde al enfocarse */
+}
+
+/* Estilos para el botón del formulario */
+.formulario__boton {
+  padding: 0.5rem 1rem; /* Relleno interno */
+  border: solid var(--bordes-color) 0.1rem; /* Borde morado */
+  background: var(--text-boton-sin-Pulsar);
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar */
+  transition: all 0.5s ease; /* Transición suave */
+  color: var(--backgrond-color);
+}
+
+/* Estilos al pasar el cursor sobre el botón */
+.formulario__boton:hover {
+  background: var(--bordes-color);
+  color: var(--backgrond-color);
+}
+
+/* Estilos para el menú en la cabecera */
+/* Contenedor flex dentro de .cabecera__zona que organiza los enlaces del menú */
+.cabecera__zona__menu {
+  display: flex;
+  align-items: center; /* Centra verticalmente los enlaces del menú */
+  gap: 1rem; /* Espacio entre cada enlace del menú */
+  list-style: none;
+}
+
+/* Estilos para los enlaces del menú */
+.menu__enlace {
+  font-size: 1rem;
+  color: var(--text-boton-sin-Pulsar); /* Color de texto */
+  text-decoration: none; /* Sin subrayado */
+  transition: all 0.5s ease;
+}
+
+/* Estilos al pasar el cursor sobre los enlaces */
+.menu__enlace:hover {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  transition: all 0.5s ease;
+  text-decoration: underline;
+}
+
+/* Página Principal */
+/* Contenedor que centra el contenido de inicio */
+.contenido__inicio {
+  text-align: center; /* Centra horizontalmente el texto y elementos hijos */
+}
+
+/* Menú móvil */
+/* Ocultamos la cabecera móvil por defecto */
+.cabecera__movil {
+  display: none; /* Oculto */
+  width: 100%; /* Ancho completo */
+  background: var(--cabeceraPie-color);
+  padding: 1rem; /* Relleno interno */
+}
+
+/* Estilos para el logo en móvil */
+.cabecera__logo__movil {
+  width: 5rem; /* Ancho del logo */
+}
+
+/* Ocultamos la entrada del menú móvil */
+.menu__entrada__cabecera__movil {
+  display: none; /* Oculto */
+}
+
+/* Estilos para el icono del menú móvil */
+/* Su tamaño y color permiten una interacción fácil en pantallas pequeñas */
+.menu__cabecera__movil {
+  font-size: 2rem; /* Tamaño grande para facilitar el toque */
+  color: white;
+  cursor: pointer; /* Indica que es interactivo */
+}
+
+/* Ocultamos la zona del menú móvil por defecto */
+.cabecera__zona__movil {
+  display: none; /* Oculto */
+}
+
+/* Mostramos la zona del menú móvil al activar el checkbox */
+.menu__entrada__cabecera__movil:checked ~ .cabecera__zona__movil {
+  display: flex; /* Mostramos el menú */
+  flex-direction: column; /* Dirección en columna */
+  gap: 1rem; /* Espacio entre elementos */
+}
+
+.contenido__mantenimiento {
+  text-align: center;
+}
+
+.titulo__inicio__mantenimiento {
+  padding-top: 10%; /* Añade un espacio superior equivalente al 10% de la altura del contenedor padre */
+  font-size: 4rem;
+  color: #5d4a39;
+  font-family: Verdana;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* Estilos para el subtítulo */
+.contenido__titulo__mantenimiento {
+  color: #fbce02;
+}
+
+/* Pie de página */
+
+/* FOOTER */
+/* Estilos para el pie de página */
+.pie {
+  margin-top: auto; /* Empuja el pie al final */
+  background: var(--cabeceraPie-color);
+  text-align: center; /* Centra el texto */
+  padding: 1rem; /* Relleno interno */
+  color: var(--text-color); /* Color de texto blanco */
+}
+
+/* Estilos para enlaces en el pie */
+.pie__enlace {
+  color: var(--text-boton-sin-Pulsar);
+  transition: all ease 1s;
+}
+
+/* Estilos al pasar el cursor sobre el enlace */
+.pie__enlace:hover {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Lista de redes sociales en el pie */
+.pie__redes {
+  display: flex; /* Usamos flexbox */
+  justify-content: center; /* Centrado horizontal */
+  gap: 1rem; /* Espacio entre elementos */
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin relleno interno */
+  margin: 1rem 0; /* Márgenes verticales */
+}
+
+/* Estilos para los iconos de redes sociales */
+.redes__icono {
+  color: var(--bordes-color);
+  font-weight: bold; /* Texto en negrita */
+  text-decoration: none; /* Sin subrayado */
+  transition: all ease 1s;
+}
+
+/* Estilos al pasar el cursor sobre los iconos */
+.redes__icono:hover {
+  color: var(--backgrond-color);
+  transition: all ease 0.5s;
+}
+
+/*Página principal*/
+
+.genero__imagen {
+  border-radius: 4rem;
+  border-color: var(--bordes-color);
+  transition: all ease 1s;
+}
+.genero__imagen:hover {
+  border: 0.2rem solid var(--bordes-color);
+  transform: scale(1.1);
+}
+
+.productos__listado {
+  height: 60vh; /*Establecemos la altura máxima de la pantalla*/
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+.listado__productos {
+  /*Contenedor para el carrusel*/
+  width: 800px; /*Estableceoms el ancho al 100% de la pantalla*/
+  max-width: 90vw; /*Ponemos un máximo para que no salgan partes de la siguiente imagen del carrusel*/
+  height: 500px; /*Ponemos altura fija del carrusel*/
+  overflow: hidden; /*Con esto ocultaremos las fotos del carrusel que no entren en el tamaño del carrusel*/
+}
+
+.listado__productos ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite cubic-bezier(0.55, 0.48, 0.37, 0.92); /*Definimos una velocidad para cada una y que dure 20 segundos*/
+}
+.listado__productos li {
+  list-style: none;
+  width: 1000px; /*El ancho de las imágenes del carrusel*/
+}
+.listado__productos img {
+  width: 100%;
+}
+
+/*La parte de las categorias*/
+.ropa__imagen__articulo {
+  max-width: 100%;
+}
+.contenedor__ropa {
+  display: grid;
+  gap: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  /*El grid template nos permite definir la estructura
+    del grid en este caso define que vamos a tener 3
+     objetos dentro y el 1fr define el tamaño de cada una
+     en este casó sería un 33% del tamaño de la pantalla*/
+}
+.ropa {
+  border-radius: 0.8rem;
+}
+.ropa:hover {
+  box-shadow: 0 0.8rem 1.1rem var(--bordes-color);
+}
+.ropa__imagen__articulo__oculto {
+  display: none;
+  width: 100%;
+  border-radius: 0.8rem;
+}
+.ropa__imagen:hover .ropa__imagen__articulo {
+  display: none;
+}
+.ropa__imagen:hover .ropa__imagen__articulo__oculto {
+  display: flex;
+  overflow: hidden;
+}
+
+.ropa__informacion {
+  padding: 1rem 1.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  line-height: 2;
+}
+
+.ropa__imagen__articulo {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 0.8rem 0.8rem 0 0;
+  transition: all 0.5s ease;
+}
+.ropa__imagen {
+  overflow: hidden;
+}
+.ropa__imagen__articulo:hover {
+  transform: scale(1.1);
+}
+
+.precio {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+.ropa__informacion button {
+  border: none;
+  background: none;
+  background-color: var(--text-color);
+  color: var(--backgrond-color);
+  padding: 0.9rem 0.6rem;
+  cursor: pointer;
+}
+/*Sobre nosotros PRINCIPAL*/
+.principal {
+  margin: 3rem;
+}
+.rebajas__titulo {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.rebajas__lista {
+  margin-left: 2rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+/*Productos destacados*/
+.productos__titulo {
+  text-align: center;
+  font-size: 4rem;
+  font-family: Verdana;
+}
+/*Categoria Generos*/
+.generos__titulo {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.generos__imagenes {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+.ropa__titulo {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+/*CONTACTO*/
+/*Alineamos los contactos al centro*/
+
+.informacion {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+}
+.localizacion {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+}
+
+/*Sobre nosotros*/
+.informacion__titulo {
+  margin-top: 1rem;
+  font-size: 2.1rem;
+}
+.informacion__descripcion {
+  font-size: 1.2rem;
+}
+.localizacion__titulo {
+  margin-top: 1rem;
+  font-size: 1.9rem;
+}
+.localizacion__descripcion {
+  font-size: 1.2rem;
+}
+.localizacion__gps {
+  width: 50vw;
+}
+.informacion__horario__titulo {
+  margin-top: 1rem;
+  font-size: 2.1rem;
+}
+.horario__descripcion {
+  font-size: 1.2rem;
+}
+
+.patrocinadores {
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+}
+.patrocinadores__titulo {
+  margin-top: 1.2rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.patrocinadores__imagen {
+  width: 50vw;
+}
+.patrocinadores__nombreInfluencer {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.patrocinadores__descripcion {
+  margin-top: 0.9rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+}
+/*En este keyframe lo que hacemos esque
+iremos poniendo margen a la derecha dando origen a las nuevas
+imagenes que estaban ocultas por el overflow*/
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+  95% {
+    margin-left: -300%;
+  }
+}
+/*Página contacto*/
+
+.articulo__formulario__contacto {
+  width: 100%; /* Ancho completo en dispositivos móviles */
+  max-width: 25rem; /* Ancho máximo en pantallas más grandes */
+  margin: 2rem auto; /* Centra el formulario horizontalmente */
+  padding: 2rem; /* Relleno interno */
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 0.6rem; /* Bordes redondeados */
+}
+.contacto__titulo {
+  display: block;
+  color: var(--bordes-color);
+  font-size: 2rem;
+}
+.contacto__titulo {
+  width: 100%;
+  text-align: center;
+}
+.formulario__contacto__formulario {
+  width: 100%;
+  text-align: center;
+}
+
+.formulario__contacto {
+  border: 2px solid var(--bordes-color);
+  border-radius: 5px;
+  outline: none;
+  padding: 0.8rem;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 0.4rem;
+}
+.formulario__contacto__apartados {
+  color: var(--backgrond-color);
+}
+
+.boton__contacto {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  background: var(--bordes-color);
+  transition: all ease 0.9s;
+}
+.boton__contacto:hover {
+  background: var(--text-color);
+  transition: all ease 0.9s;
+  color: var(--backgrond-color);
+}
+
+/*Página devoluciones*/
+.main__devoluciones {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+/*APARTADOS*/
+.devoluciones {
+  display: flex;
+  flex-direction: column;
+}
+.devolucion__proceso {
+  display: flex;
+  flex-direction: column;
+}
+.devolucion__ayuda {
+  display: flex;
+  flex-direction: column;
+}
+/*Definiendo tabla*/
+.devolucion__tabla {
+  display: inline-block;
+
+  border-collapse: collapse;
+  margin-left: 1rem;
+}
+.ayuda__tabla th,
+td {
+  padding: 1rem;
+  text-align: center;
+  border: 2.9px solid var(--bordes-color);
+}
+
+/*Devoluciones Seccion*/
+.motivos__listado {
+  margin-left: 2rem;
+}
+.devoluciones__descripcion {
+  margin-left: 1rem;
+}
+/*Devoluciones proceso Seccion*/
+.atencionCliente__listado {
+  margin-left: 2rem;
+}
+
+/*Formulario*/
+.devolucion__proceso__formulario {
+  margin-top: 1rem;
+}
+.devolucion__contenedor__formulario {
+  margin-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 17rem;
+  height: 17rem;
+  background-color: var(--bordes-color);
+  border-radius: 0.6rem;
+  align-items: center;
+}
+.formulario__ID__articulo {
+  margin-bottom: 1rem;
+}
+.devolucion__selector {
+  margin-bottom: 1rem;
+  background-color: var(--text-boton-sin-Pulsar);
+  color: var(--backgrond-color);
+  width: 70%;
+}
+.devolucion__label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.devolucion__boton {
+  margin-top: 1rem;
+  background-color: var(--text-color);
+  color: var(--backgrond-color);
+  width: 70%;
+  margin-bottom: 1rem;
+  transition: all ease 0.9s;
+}
+
+.devolucion__boton:hover {
+  background: var(--backgrond-color);
+  color: var(--text-color);
+  transition: all ease 0.9s;
+}
+.devolucion__descripcion {
+  width: 70%;
+  height: 40%;
+}
+
+/*Devolucion ayuda Seccion*/
+.ayuda__descripcion {
+  margin-left: 1rem;
+}
+
+/* Media Queries */
+
+/*Estilos aplicados cuando el ancho de la pantalla sea menor a 1100*/
+@media (max-width: 1200px) {
+  .generos__titulo {
+    margin-bottom: 2.5vw;
+  }
+  .generos__imagenes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 90%;
+  }
+  .genero__imagen {
+    margin-left: 10vw;
+  }
+}
+
+/* Estilos aplicados cuando el ancho de la pantalla es menor o igual a 800px */
+@media (max-width: 800px) {
+  .cabecera {
+    display: none; /* Ocultamos la cabecera estándar en dispositivos móviles */
+  }
+  .buscador__inicio {
+    width: 25rem;
+  }
+
+  .cabecera__movil {
+    display: flex; /* Mostramos la cabecera móvil */
+    align-items: center; /* Centra verticalmente los elementos dentro de la cabecera móvil */
+    justify-content: space-between; /* Separa el logo y el ícono de menú a los extremos */
+    padding: 0.5rem 1rem; /* Relleno interno */
+    background-color: var(--cabeceraPie-color);
+  }
+
+  .menu__entrada__cabecera__movil {
+    display: none; /* Ocultamos por defecto */
+  }
+
+  .cabecera__zona__movil {
+    display: none; /* Ocultamos por defecto */
+    position: absolute; /* Posición absoluta */
+    top: 60px; /* Debajo de la cabecera */
+    right: 0; /* A la derecha */
+    width: auto; /* Ancho completo */
+    flex-direction: column; /* Dirección en columna */
+    background-color: black; /* Fondo negro */
+    padding: 1rem; /* Relleno interno */
+    z-index: 100; /* Sobre otros elementos */
+  }
+
+  .menu__cabecera__movil {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer; /* Cambia el cursor al pasar */
+    user-select: none; /* Evita la selección de texto */
+  }
+
+  .menu__enlace__movil {
+    color: white;
+    text-decoration: none; /* Sin subrayado */
+    margin: 0.5rem 0; /* Márgenes verticales */
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+
+  .menu__enlace__movil:hover {
+    color: rgb(255, 132, 0);
+    font-size: 1.2rem;
+    text-decoration: underline;
+  }
+  .cabecera__zona__menu__movil {
+    flex-direction: column;
+    gap: 9px;
+    list-style: none;
+  }
+  .cabecera__zona__movil {
+    margin-top: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 30px;
+    flex-direction: column;
+    background: var(--bordes-color);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+  }
+  .cabecera__zona__movil.show {
+    display: flex;
+  }
+
+  .cabecera__zona__menu__movil a {
+    text-decoration: none;
+    color: var(--text-boton-sin-Pulsar);
+    transition: all 0.3s ease;
+  }
+
+  .cabecera__zona__menu__movil a:hover {
+    border-radius: 5px;
+    color: var(--text-color);
+  }
+  .titulo__inicio__mantenimiento {
+    font-size: 3rem;
+  }
+
+  .contenedor__ropa {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alejadnro Principal</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header class="cabecera">
+    <a href="principal.html">
+        <img
+                class="cabecera__logo"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
+    <article class="cabecera__zona">
+        <form class="cabecera__formulario">
+            <input
+                    class="formulario__input"
+                    type="text"
+                    placeholder="Buscar contenido..."
+            />
+            <button class="formulario__boton" type="submit">buscar</button>
+        </form>
+        <nav>
+            <ul class="cabecera__zona__menu">
+                <li><a class="menu__enlace" href="principal.html">Inicio</a></li>
+                <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
+                <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
+                <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </article>
+</header>
+<header class="cabecera__movil">
+    <a href="principal.html">
+        <img
+                class="cabecera__logo__movil"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
+    <input type="checkbox" id="menu" class="menu__entrada__cabecera__movil" />
+    <label for="menu" class="menu__cabecera__movil">☰</label>
+    <nav class="cabecera__zona__movil">
+        <ul class="cabecera__zona__menu__movil">
+            <li><a class="menu__enlace__movil" href="principal.html">Inicio</a></li>
+            <li><a class="menu__enlace__movil" href="tienda.html">Tienda</a></li>
+            <li><a class="menu__enlace__movil" href="devoluciones.html">Devoluciones</a></li>
+            <li><a class="menu__enlace__movil" href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main__devoluciones"> <!--PONER CATEGORIAS DE HOMBRE, MUJER, NIÑOS Y NIÑAS-->
+    <section class="devoluciones">
+        <article class="devoluciones__informacion">
+            <h2>Política de devoluciones</h2>
+            <p class="devoluciones__descripcion">Nuestra política de devolución regula que el cliente podrá realizar una devolución de una compra realizada en un plazo de 30 días en caso de que la ropa no haya sido usada</p>
+            <h2>Condición para realizar una devolución</h2>
+            <p class="devoluciones__descripcion">La prenda o articulo debe estar en perfecto estado y de ser posible no haber sido habierto el emboltorio que protege la prenda o árticulo</p>
+            <p class="devoluciones__descripcion">El plazo máximo es de 30 días desde que se realizó la compra</p>
+        </article>
+        <article class="devoluciones__motivos">
+            <h3>Motivos</h3>
+            <p class="devoluciones__descripcion">Los motivos por los que se podrían realizar una devolución son los siguientes:</p>
+            <ul class="motivos__listado">
+                <li>Defecto de fábrica</li>
+                <li>Talla incorrecta</li>
+                <li>Manchas</li>
+                <li>Color no deseado</li>
+            </ul>
+        </article>
+    </section>
+    <section class="devolucion__proceso">
+        <h2>Proceso para solicitar devolución</h2>
+        <article class="devolucion__proceso__informacion">
+            <p class="devoluciones__descripcion">El proceso para solicitar la devolución puede ser tanto contactando con atención al cliente o rellenando el siguiente formulario</p>
+            <article class="devolucion__proceso__atencionCliente">
+                <p class="devoluciones__descripcion">En caso de que usted desee contactar con atención al cliente siga los siguientes pasos:</p>
+                <ul class="atencionCliente__listado">
+                    <li>Llamar al +34 999999999</li>
+                    <li>Empaquetar el árticulo de forma que quede igual que ustéd lo compró</li>
+                    <li>Enviar el paquete a la tienda en donde compró ese árticulo</li>
+                    <li>Revisar el correo eléctronico con el que realizó la compra para verificar si la devolución se ha podido realizar con exito</li>
+                </ul>
+            </article>
+        </article>
+        <article class="devolucion__proceso__formulario">
+            <h2>Formulario</h2>
+            <p class="devoluciones__descripcion">En caso de que prefiera realizar la devolución de forma online rellene el siguiente formulario</p>
+            <h2>Devoluciones</h2>
+            <form class="devolucion__contenedor__formulario">
+                <br>
+                <label for="devolucion__id" class="devolucion__label">ID del árticulo</label>
+                <input id="devolucion__id" class="formulario__ID__articulo" placeholder="Introduce el id del árticulo" type="text" required/>
+
+                <label for="devolucion__motivo" class="devolucion__label">Mótivo del reembolso</label>
+                <select id="devolucion__motivo" name="devolucion__motivo" class="devolucion__selector" required>
+                    <option value="">Seleccione un motivo</option>
+                    <option value="defecto">Defecto de fábrica</option>
+                    <option value="talla">Talla incorrecta</option>
+                    <option value="mancha">Manchas en el árticulo</option>
+                    <option value="color">Color no deseado</option>
+                </select>
+                <label for="devolucion__descripcion" class="devolucion__label">Descripción del reembolso</label>
+                <textarea id="devolucion__descripcion" class="devolucion__descripcion" placeholder="Escriba el mótivo de su reembolso, para poder entender mejor el motivo y mejorar nuestro servicio" required/></textarea>
+                <button type="submit" class="devolucion__boton">Enviar</button>
+            </form>
+        </article>
+    </section>
+    <section class="devolucion__ayuda">
+        <article class="ayuda__titulo">
+            <h2>Ayuda</h2>
+            <p class="ayuda__descripcion">Nos gustaría poder ayudarte para que nunca te vuelvas a preocupar por tramitar una devolución por lo que te vamos a dar guía de tallas, los demás mótivos por los que podrías estar dispuesta/o a realizar la devolución son problemas que intentaremos resolver nosotros por lo que no se debe preocupar que nunca volverá a pasar por esta situación en caso de que su devolución haya sido algúna otra que no séa por error en la talla.</p>
+        </article>
+        <article class="ayuda__tabla">
+            <h2 class="tabla__titulo">Tabla de Tallas de Ropa</h2>
+
+            <table class="devolucion__tabla">
+                <thead class="tabla__cabecera">
+                        <tr>
+                            <th>Talla</th>
+                            <th>Cadera (cm)</th>
+                            <th>Cintura (cm)</th>
+                            <th>Pecho (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>36</td>
+                            <td>94</td>
+                            <td>66</td>
+                            <td>86</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>98</td>
+                            <td>70</td>
+                            <td>90</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>102</td>
+                            <td>74</td>
+                            <td>94</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>106</td>
+                            <td>78</td>
+                            <td>98</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>110</td>
+                            <td>82</td>
+                            <td>102</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>115</td>
+                            <td>86</td>
+                            <td>106</td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>120</td>
+                            <td>93</td>
+                            <td>110</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>126</td>
+                            <td>98</td>
+                            <td>114</td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>131</td>
+                            <td>106</td>
+                            <td>118</td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>136</td>
+                            <td>112</td>
+                            <td>122</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </article>
+        <article class="ayuda__tabla">
+            <h2 class="tabla__titulo">Tabla de Tallas de Calzado</h2>
+            <table class="devolucion__tabla">
+                <thead class="tabla__cabecera">
+                <tr>
+                    <th>Talla</th>
+                    <th>Centímetros</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th colspan="2">Mujer</th>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>22.5</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>23.5</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>25.5</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Hombre</th>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>25.5</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>28.5</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+</main>
+
+
+<footer class="pie">
+    <p>&copy; 2024 Alejandro - Todos los derechos reservados</p>
+    <p>
+        <a href="principal.html" class="pie__enlace">Inicio</a> |
+        <a href="contacto.html" class="pie__enlace">Contacto</a>
+    </p>
+    <nav>
+        <ul class="pie__redes">
+            <li>
+                <a href="https://www.instagram.com/" class="redes__icono">Instagram</a>
+            </li>
+            <li><a href="https://x.com/" class="redes__icono">Twitter</a></li>
+            <li>
+                <a href="https://www.facebook.com/" class="redes__icono">Facebook</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>

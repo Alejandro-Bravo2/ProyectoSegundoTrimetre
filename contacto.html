@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alejadnro Principal</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header class="cabecera">
+    <a href="principal.html">
+        <img
+                class="cabecera__logo"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
+    <article class="cabecera__zona">
+        <form class="cabecera__formulario">
+            <input
+                    class="formulario__input"
+                    type="text"
+                    placeholder="Buscar contenido..."
+            />
+            <button class="formulario__boton" type="submit">buscar</button>
+        </form>
+        <nav>
+            <ul class="cabecera__zona__menu">
+                <li><a class="menu__enlace" href="principal.html">Inicio</a></li>
+                <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
+                <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
+                <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </article>
+</header>
+<header class="cabecera__movil">
+    <a href="principal.html">
+        <img
+                class="cabecera__logo__movil"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
+    <input type="checkbox" id="menu" class="menu__entrada__cabecera__movil" />
+    <label for="menu" class="menu__cabecera__movil">☰</label>
+    <nav class="cabecera__zona__movil">
+        <ul class="cabecera__zona__menu__movil">
+            <li><a class="menu__enlace__movil" href="principal.html">Inicio</a></li>
+            <li><a class="menu__enlace__movil" href="tienda.html">Tienda</a></li>
+            <li><a class="menu__enlace__movil" href="devoluciones.html">Devoluciones</a></li>
+            <li><a class="menu__enlace__movil" href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contacto">
+        <article class="articulo__formulario__contacto">
+            <form class="formulario__contacto__formulario">
+                <header>
+                    <h1 class="contacto__titulo">Contacto</h1>
+                </header>
+                <br>
+                <label for="nombre" class="formulario__contacto__apartados">Nombre</label>
+                <input class="formulario__contacto" id="nombre" type="text" placeholder="Introduce tu nombre" required/>
+                <label for="apellido"  class="formulario__contacto__apartados">Apellido</label>
+                <input class="formulario__contacto" id="apellido" type="text" placeholder="Introduce tu apellido" required/>
+                <label for="email"  class="formulario__contacto__apartados">Email</label>
+                <input class="formulario__contacto" id="email" type="email" placeholder="Introduce tu email" required/>
+                <label for="telefono"  class="formulario__contacto__apartados">Telefono</label>
+                <input class="formulario__contacto" id="telefono" type="text" placeholder="Introduce tu telefono" required/>
+                <label for="fecha__nacimiento"  class="formulario__contacto__apartados">Fecha nacimiento</label>
+                <input class="formulario__contacto" id="fecha__nacimiento" type="date" required>
+                <label for="genero"  class="formulario__contacto__apartados">Genero</label>
+                <input class="formulario__contacto" id="genero" type="text" placeholder="Introduce tu genero" required>
+                <button type="submit" class="boton__contacto">Enviar</button>
+            </form>
+        </article>
+    </section>
+    <section class="informacion">
+        <h2 class="informacion__titulo">Sobre nosotros</h2>
+        <article class="informacion__descripcion">
+            <p>Actualmente nos especializamos en todo tipo de prendas de ropas y calzado.</p>
+            <h2 class="informacion__horario__titulo">Horarios</h2>
+            <p class="horario__descripcion">Mañana: 8:00-14:00</p>
+            <p class="horario__descripcion">Tarde: 16:00-21:00</p>        </article>
+    </section>
+    <section class="localizacion">
+        <h2 class="localizacion__titulo">¿Donde nos puedes encontrar?</h2>
+        <article class="localizacion__descripcion">
+            <p>Actualmente nos ubicamos unicamente en cádiz y esta es la ubicación en la que estamos:</p>
+        </article>
+        <article class="localizacion__imgagen">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6413.424788864597!2d-6.2775073235805054!3d36.512804083846355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd23427b20e77%3A0x4bcc23e4b019b0e1!2sIES%20Rafael%20Alberti!5e0!3m2!1ses!2ses!4v1736963192567!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="localizacion__gps"></iframe>
+        </article>
+    </section>
+    <section class="patrocinadores">
+        <h2 class="patrocinadores__titulo">Patrocionadores</h2>
+        <ul>
+            <li class="patrocinadores__nombreInfluencer">Pablo Motos</li>
+            <img src="assets/img/pabloMotos.jpg" alt="Pablo Motos" class="patrocinadores__imagen"/>
+            <li class="patrocinadores__nombreInfluencer">Topuria</li>
+            <img src="assets/img/topuria.webp" alt="Topuria" class="patrocinadores__imagen"/>
+            <li class="patrocinadores__nombreInfluencer">Fernando Alonso</li>
+            <img src="assets/img/fernandoAlonso.webp.webp" alt="Fernando Alonso" class="patrocinadores__imagen"/>
+            <li class="patrocinadores__nombreInfluencer">Rafa Nadal</li>
+            <img src="assets/img/rafaNadal.avif" alt="Rafa Nadal" class="patrocinadores__imagen"/>
+        </ul>
+        <p class="patrocinadores__descripcion">Gracias a todos por su aportación y por darle una oportunidad a esta compañía</p>
+    </section>
+
+</main>
+
+
+<footer class="pie">
+    <p>&copy; 2024 Alejandro - Todos los derechos reservados</p>
+    <p>
+        <a href="principal.html" class="pie__enlace">Inicio</a> |
+        <a href="contacto.html" class="pie__enlace">Contacto</a>
+    </p>
+    <nav>
+        <ul class="pie__redes">
+            <li>
+                <a href="https://www.instagram.com/" class="redes__icono"
+                >Instagram</a
+                >
+            </li>
+            <li><a href="https://x.com/" class="redes__icono">Twitter</a></li>
+            <li>
+                <a href="https://www.facebook.com/" class="redes__icono"
+                >Facebook</a
+                >
+            </li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>

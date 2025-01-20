@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alejadnro Principal</title>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<header class="cabecera">
+    <a href="principal.html">
+        <img
+                class="cabecera__logo"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
+    <article class="cabecera__zona">
+        <form class="cabecera__formulario">
+            <input
+                    class="formulario__input"
+                    type="text"
+                    placeholder="Buscar contenido..."
+            />
+            <button class="formulario__boton" type="submit">buscar</button>
+        </form>
+        <nav>
+            <ul class="cabecera__zona__menu">
+                <li><a class="menu__enlace" href="principal.html">Inicio</a></li>
+                <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
+                <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
+                <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </article>
+</header>
+<header class="cabecera__movil">
+    <a href="principal.html">
+        <img
+                class="cabecera__logo__movil"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
+    <input type="checkbox" id="menu" class="menu__entrada__cabecera__movil" />
+    <label for="menu" class="menu__cabecera__movil">☰</label>
+    <nav class="cabecera__zona__movil">
+        <ul class="cabecera__zona__menu__movil">
+            <li><a class="menu__enlace__movil" href="principal.html">Inicio</a></li>
+            <li><a class="menu__enlace__movil" href="tienda.html">Tienda</a></li>
+            <li><a class="menu__enlace__movil" href="devoluciones.html">Devoluciones</a></li>
+            <li><a class="menu__enlace__movil" href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main> <!--PONER CATEGORIAS DE HOMBRE, MUJER, NIÑOS Y NIÑAS-->
+    <section class="sudaderas">
+        <h2 class="ropa__titulo">Sudaderas</h2>
+        <section class="contenedor__ropa" id="link__sudaderas">
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/sudaderaHombreCara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/sudaderaHombreEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Sudadera Hombre</h2>
+                    <p class="precio">45$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/sudaderaMujerCara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/sudaderaMujerEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Sudadera Mujer</h2>
+                    <p class="precio">41$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+
+
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/sudaderaHombre2Cara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/sudaderaHombre2Espalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Traje Chaqueta</h2>
+                    <p class="precio">120$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+        </section>
+    </section>
+    <section>
+        <h2 class="ropa__titulo">Camisetas</h2>
+        <section class="contenedor__ropa" id="link__camisetas">
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/camisetaHombreCara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/camisetaHombre.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Camiseta blanca</h2>
+                    <p class="precio">12$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/camisetaMujerCara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/camisetaMujerEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Camiseta blanca mujer </h2>
+                    <p class="precio">41$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+
+
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/camisetaAzulCara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/camisetaAzulEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Camiseta azul marino</h2>
+                    <p class="precio">120$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+        </section>
+    </section>
+    <section>
+        <h2 class="ropa__titulo">Zapatos</h2>
+        <section class="contenedor__ropa" id="link__zapatos">
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/zapatoMujerCara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/zapatoMujerEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Mocasines</h2>
+                    <p class="precio">39$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/zapatoHombre2Cara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/zapatoHombre2Espalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Calzado</h2>
+                    <p class="precio">95$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+
+
+            <article class="ropa">
+                <article class="ropa__imagen">
+                    <img src="assets/img/zapatoHombreCara.webp" alt="foto de tacón" class="ropa__imagen__articulo">
+                    <img src="assets/img/zapatoHombreEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
+                </article>
+                <article class="ropa__informacion">
+                    <h2>Zapatos</h2>
+                    <p class="precio">74$</p>
+                    <button>Añadir al carrito</button>
+                </article>
+            </article>
+        </section>
+    </section>
+    <br>
+
+
+</main>
+
+
+<footer class="pie">
+    <p>&copy; 2024 Alejandro - Todos los derechos reservados</p>
+    <p>
+        <a href="principal.html" class="pie__enlace">Inicio</a> |
+        <a href="contacto.html" class="pie__enlace">Contacto</a>
+    </p>
+    <nav>
+        <ul class="pie__redes">
+            <li>
+                <a href="https://www.instagram.com/" class="redes__icono"
+                >Instagram</a
+                >
+            </li>
+            <li><a href="https://x.com/" class="redes__icono">Twitter</a></li>
+            <li>
+                <a href="https://www.facebook.com/" class="redes__icono"
+                >Facebook</a
+                >
+            </li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
