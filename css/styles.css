@@ -353,7 +353,7 @@ body {
 /*Productos destacados*/
 .productos__titulo {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: Verdana;
 }
 /*Categoria Generos*/
@@ -635,6 +635,7 @@ td {
   }
   .genero__imagen {
     margin-left: 10vw;
+    width: 20rem;
   }
 }
 
