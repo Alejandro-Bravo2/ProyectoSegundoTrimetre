@@ -82,6 +82,41 @@ para la visualización del código en tiempo real. También he usado git y githu
 Esta actividad era de forma práctica por lo que no se necesita realizar ninguna aclaración
 
 
+## Ejemplos de uso de animaciones
+Con esta animación me definí el carrusel de la página principal.
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L241-L267
+
+La animación utilizada lo que va haciendo es añadir margen a la derecha para ir cambiando de imagen
+y como el article tiene una propiedad de overflow lo que me permite es que
+en caso de que la imágen sea mayor al tamaño asignado lo que hará es recortarla
+por lo que estaría recortando las 3 imágenes.
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L445-L473
 
 
+Con esta animación pude realizar que en la página de tienda cuando se pusiera el ratón 
+encima de la imágen se mostrase la imágen desde otra perspectiva:
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L270-L324
 
+
+Otros ejemplos en los que haya usado animaciones
+para cambiar el estado de dicha etiqueta:
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L69-L71
+
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L85-L88
+
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L108-L114
+
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L199-L203
+
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L224-L227
+
+También hay más ejemplos pero la mayoría son parecidos.
+
+## Uso de responsive
+Con este responsive cambie las imágenes de genero de la página principal
+para que no se juntaran ambas imágenes y para eso los puse en columna.
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L626-L640
+
+Aqui lo que hacemos es ocultar el header y activamos el header definido para móbiles
+también modifico el tamaño de algunos textos para que se ajusten a la ventana.
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/d72a73cc5f25d9147ed452c51e043184f42168d0/css/styles.css#L643-L750
