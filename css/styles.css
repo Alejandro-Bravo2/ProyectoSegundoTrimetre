@@ -731,4 +731,20 @@ td {
   .contenedor__ropa {
     grid-template-columns: repeat(1, 1fr);
   }
+  .productos__titulo{
+    font-size: 10vw;
+  }
+  .generos__titulo{
+    font-size: 10vw;
+  }
+  .rebajas__titulo{
+    font-size: 10vw;
+  }
+  .genero__imagen{
+    width: 60vw;
+  }
+  .patrocinadores__titulo{
+    font-size: 10vw;
+  }
+
 }
