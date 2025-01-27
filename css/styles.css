@@ -572,6 +572,9 @@ td {
 .devolucion__proceso__formulario {
   margin-top: 1rem;
 }
+.devoluciones__informacion__titulo{
+  font-size: 3rem;
+}
 .devolucion___proceso__formulario {
   margin-left: 1.4rem;
   display: flex;
