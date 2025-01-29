@@ -381,23 +381,31 @@ body {
 /*Alineamos los contactos al centro*/
 
 .informacion {
-  flex-direction: column;
+  flex-direction: row;
+  background-color: var(--cabeceraPie-color);
   display: flex;
   text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .localizacion {
   flex-direction: column;
   display: flex;
   text-align: center;
+  width: 50%;
 }
 
 /*Sobre nosotros*/
 .informacion__titulo {
   margin-top: 1rem;
+  width: 100%;
   font-size: 2.1rem;
+  height: 5rem;
 }
 .informacion__descripcion {
   font-size: 1.2rem;
+  width: 50%;
+  align-self: center;
 }
 .localizacion__titulo {
   margin-top: 1rem;
@@ -405,9 +413,12 @@ body {
 }
 .localizacion__descripcion {
   font-size: 1.2rem;
+  width: 50%;
+  margin: auto;
 }
 .localizacion__gps {
-  width: 50vw;
+  width: 80%;
+  height: 19rem;
 }
 .informacion__horario__titulo {
   margin-top: 1rem;
@@ -418,26 +429,45 @@ body {
 }
 
 .patrocinadores {
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
-  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.patrocinadores__imagenes{
+  width: 46%;
+}
+.patrocinadores__lista{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 3rem;
+  list-style: none;
+  justify-content: space-between;
 }
 .patrocinadores__titulo {
   margin-top: 1.2rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
+  width: 100%;
+  text-align: center;
 }
 .patrocinadores__imagen {
-  width: 50vw;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 .patrocinadores__nombreInfluencer {
   font-size: 1.5rem;
   font-weight: bold;
 }
 .patrocinadores__descripcion {
-  margin-top: 0.9rem;
   font-size: 1.2rem;
-  margin-bottom: 0.9rem;
+  width: 100%;
+  text-align: center;
+
 }
 /*En este keyframe lo que hacemos esque
 iremos poniendo margen a la derecha dando origen a las nuevas
@@ -531,16 +561,36 @@ imagenes que estaban ocultas por el overflow*/
 }
 /*APARTADOS*/
 .devoluciones {
+  flex-direction: row;
+  background-color: var(--cabeceraPie-color);
   display: flex;
-  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  border-radius: 0.6rem;
 }
 .devolucion__proceso {
   display: flex;
   flex-direction: column;
+  width: 100%;
+
 }
 .devolucion__ayuda {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 50rem;
+  border: 0.5rem solid var(--text-boton-sin-Pulsar);
+  border-radius: 0.6rem;
+  background-color: var(--bordes-color);
+}
+
+.devoluciones__alinear{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
 }
 /*Definiendo tabla*/
 .tabla__devolucion {
@@ -552,16 +602,23 @@ imagenes que estaban ocultas por el overflow*/
 .ayuda__tabla th,
 td {
   padding: 1rem;
-  text-align: center;
-  border: 2.9px solid var(--bordes-color);
+  border: 2.9px solid var(--text-color);
 }
-
+.ayuda{
+  width: 100%;
+  align-items: center;
+}
+.devolucion__titulo{
+  margin-top: 0.5rem;
+  font-size: 2rem;
+}
 /*Devoluciones Seccion*/
 .motivos__listado {
   margin-left: 2rem;
 }
 .devolucion__informacion__descripcion {
   margin-left: 1rem;
+
 }
 /*Devoluciones proceso Seccion*/
 .atencionCliente__listado {
@@ -570,34 +627,78 @@ td {
 
 /*Formulario*/
 .devolucion__proceso__formulario {
-  margin-top: 1rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  gap: 0.7rem;
+}
+.formulario__titulo {
+  font-size: 1.6rem;
+}
+.devoluciones__informacion{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.devolucion__proceso__informacion{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.devoluciones__motivos{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.motivos__listado{
+  list-style: none;
+}
+.atencionCliente__listado{
+  list-style: none;
 }
 .devoluciones__informacion__titulo{
   font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.devoluciones__alinear{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .devolucion___proceso__formulario {
-  margin-left: 1.4rem;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  width: 17rem;
-  height: 17rem;
+  width: 25rem;
+  height: 20rem;
   background-color: var(--bordes-color);
   border-radius: 0.6rem;
   align-items: center;
+
 }
 .devolucion__proceso__formulario__articulo {
   margin-bottom: 1rem;
+  width: 70%;
+  background-color: var(--cabeceraPie-color);
+  color: var(--backgrond-color);
+  font-size: 1.2rem;
+
 }
 .devolucion__proceso__formulario__selector {
   margin-bottom: 1rem;
   background-color: var(--text-boton-sin-Pulsar);
   color: var(--backgrond-color);
   width: 70%;
+  font-size: 1.1rem;
 }
 .devolucion__proceso__formulario__label {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
+  text-align: start;
+  align-items: normal;
 }
 .devolucion__proceso__formulario__boton {
   margin-top: 1rem;
@@ -606,6 +707,7 @@ td {
   width: 70%;
   margin-bottom: 1rem;
   transition: all ease 0.9s;
+  font-size: 1.2rem;
 }
 
 .devolucion__proceso__formulario__boton:hover {
@@ -616,11 +718,33 @@ td {
 .devolucion__proceso__formulario__descripcion {
   width: 70%;
   height: 40%;
+  font-size: 1.2rem;
 }
-
+.ayuda__tablas{
+  display: flex;
+  flex-direction: row;
+}
+.motivos__tipos{
+  display: flex;
+  flex-direction: column;
+  margin: 0rem;
+  text-align: left;
+  width: 100%;
+  align-items: center;
+}
+.devolucion__informacion__descripcion__atencion{
+  display: flex;
+  flex-direction: column;
+  margin: 0rem;
+  text-align: left;
+  width: 100%;
+}
 /*Devolucion ayuda Seccion*/
 .ayuda__descripcion {
-  margin-left: 1rem;
+  display: flex;
+  width: 80%;
+  align-content: center;
+  margin: 1rem auto;
 }
 
 /* Media Queries */
@@ -749,5 +873,100 @@ td {
   .patrocinadores__titulo{
     font-size: 10vw;
   }
+
+  .devoluciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .devoluciones__informacion__titulo{
+    font-size: 6.5vw;
+    margin-bottom: 1rem;
+  }
+
+  .ayuda{
+    display: flex;
+    flex-direction: column;
+  }
+  .ayuda__tablas{
+    display: flex;
+    flex-direction: column;
+  }
+  .devolucion__informacion__titulo{
+    font-size: 4.5vw;
+  }
+  .formulario__titulo{
+    text-align: center;
+  }
+  .devoluciones__informacion{
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .devolucion__proceso__informacion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .devoluciones__motivos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .motivos__tipos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+  }
+
+  .devolucion___proceso__formulario{
+    width: 100%;
+    margin: 0rem;
+  }
+
+
+
+  .patrocinadores{
+    display: flex;
+    flex-direction: column;
+  }
+  .patrocinadores__lista{
+    display: flex;
+    flex-direction: column;
+  }
+  .patrocinadores__imagenes{
+    width: 100%;
+  }
+
+
+  .informacion{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    gap: 0rem;
+  }
+  .localizacion{
+    width: 100%;
+  }
+  .informacion__descripcion{
+    width: 100%;
+  }
+
+
+  .informacion__horario__titulo{
+    font-size: 2rem;
+    margin-top: 0rem;
+  }
+  .patrocinadores__titulo{
+    font-size: 7vw;
+  }
+
+
+
+
+
+
 
 }
