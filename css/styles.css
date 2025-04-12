@@ -14,12 +14,19 @@
   --cabeceraPie-color: rgba(1, 19, 106, 0.63);
 
   /*Tema oscuro*/
-  --background-principal-dark: #121212;
-  --text-principal-dark: #eeeeee;
-  --bordes-color-dark: #64b5f6;
-  --text-boton-sin-Pulsar-dark: #bbdefb;
-  --cabeceraPie-color-dark: #1e3a8a;
+  .dark {
+    --backgrond-color: #121212;
+    --text-color: #eeeeee;
+    --bordes-color: #64b5f6;
+    --text-boton-sin-Pulsar: #bbdefb;
+    --cabeceraPie-color: #1e3a8a;
+  }
 }
+
+
+
+
+
 
 body {
   display: flex;
@@ -28,6 +35,23 @@ body {
   background: var(--backgrond-color);
   font-size: 16px;
 }
+#boton__cambiar__color__tema {
+  top: 20px;       /* Distancia desde el tope */
+  right: 50%;     /* Distancia desde el borde derecho */
+  z-index: 1000;   /* Se asegura que quede por encima de otros elementos */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#boton__cambiar__color__tema__desplegable{
+  margin-left: 2rem;
+}
+
+
+
 
 /* HEADER */
 /* Estilos para la cabecera principal, que es un contenedor flex que contiene el logo y la zona de menú */
@@ -44,6 +68,12 @@ body {
 /* El logo tiene un ancho fijo y su tamaño no depende de otros elementos */
 .cabecera__logo {
   width: 6rem; /* Ancho fijo del logo */
+}
+.principal__sobreNosotros{
+  color: var(--text-color);
+}
+.productos{
+  color: var(--text-color);
 }
 
 /* Estilos para la zona de la cabecera */
@@ -266,6 +296,79 @@ body {
   width: 100%;
 }
 
+
+/*Los filtros de la página de tienda*/
+
+.ropa__imagen__agregada__js{
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 1s;
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+.ropa__imagen__agregada__js:hover{
+  scale: 1.2;
+  transition: all ease 1s;
+}
+
+.filtros{
+  display: flex;
+  flex-direction: column;
+}
+.titulo__filtros{
+  margin-left: 1rem;
+  color: var(--text-color);
+}
+
+.filtros__ropa{
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+.filtros__precio{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.filtros__genero{
+   display: flex;
+   flex-direction: column;
+   margin-left: 0.7rem;
+ }
+
+.agregar__producto__titulo{
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.agregar__producto__datos{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+#agregar__producto__precio, #agregar__producto__nombre,
+#agregar__producto__tipo{
+  padding: 10px;
+  border: 1px solid var(--text-boton-sin-Pulsar);
+  border-radius: 4px;
+  font-size: 1em;
+  width: 10rem;
+  box-sizing: border-box;
+}
+/*PARTE DE AGREGAR PRODUCTO*/
+.agregar__producto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.agregar__producto__titulo{
+  margin-left: 1rem;
+  color: var(--text-color);
+}
+
+
 /*La parte de las categorias*/
 .ropa__imagen__articulo {
   max-width: 100%;
@@ -283,6 +386,7 @@ body {
 }
 .ropa {
   border-radius: 0.8rem;
+  border: 1px solid var(--bordes-color);
 }
 .ropa:hover {
   box-shadow: 0 0.8rem 1.1rem var(--bordes-color);
@@ -325,7 +429,12 @@ body {
 .precio {
   font-size: 1.1rem;
   font-weight: 900;
+  color: var(--text-color);
 }
+.subtitulo__ropa__informacion{
+  color: var(--text-color);
+}
+
 .ropa__informacion button {
   border: none;
   background: none;
@@ -341,6 +450,7 @@ body {
 .rebajas__titulo {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 .rebajas__lista {
@@ -348,6 +458,7 @@ body {
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
+  color: var(--text-color);
 }
 
 /*Productos destacados*/
@@ -361,6 +472,7 @@ body {
   text-align: center;
   font-size: 4rem;
   margin-bottom: 2rem;
+  color: var(--text-color);
 }
 
 .generos__imagenes {
@@ -375,7 +487,94 @@ body {
   margin-bottom: 1rem;
   text-align: center;
   font-size: 3rem;
+  color: var(--text-color);
 }
+
+
+/*Filtros tienda*/
+
+.filtros {
+  background-color: var(--backgrond-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background: var(--cabeceraPie-color);
+}
+
+#agregar__producto__entrada{
+  display: none;
+}
+#agregar__producto__label{
+  background: var(--cabeceraPie-color);
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  transition: all ease 1s;
+
+}
+#agregar__producto__label:hover{
+  background: var(--bordes-color);
+  transition: all ease 1s;
+}
+
+.agregar__producto__imagen{
+  margin-top: 1rem;
+}
+
+.agregar__producto__titulo__seccion{
+  width: 100px;
+  text-align: start;
+  color: var(--text-color);
+}
+
+
+
+.filtros__ropa__tienda, .filtros__precio__tienda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filtros__ropa__titulo, .filtros__precio__titulo {
+  font-weight: bold;
+  color: var(--text-color);
+  width: 80px;
+  text-align: center;
+}
+
+.filtros__ropa_desplegable, .filtros__precio_desplegable {
+  padding: 10px;
+  border: 1px solid var(--text-boton-sin-Pulsar);
+  border-radius: 4px;
+  font-size: 1em;
+  width: 10rem;
+  box-sizing: border-box;
+}
+
+#filtros__boton, #agregar__producto__boton {
+  background-color: var(--bordes-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.8s ease;
+  width: auto;
+  margin-top: 15px;
+  align-self: center;
+}
+#agregar__producto__boton{
+  margin-bottom: 2rem;
+}
+#filtros__boton:hover, #agregar__producto__boton:hover {
+  background-color: var(--text-boton-sin-Pulsar);
+  transition: background-color 0.8s ease;
+}
+
+
 
 /*CONTACTO*/
 /*Alineamos los contactos al centro*/
@@ -453,6 +652,7 @@ body {
   font-weight: bold;
   width: 100%;
   text-align: center;
+  color: var(--text-color);
 }
 .patrocinadores__imagen {
   width: 100%;
@@ -462,11 +662,13 @@ body {
 .patrocinadores__nombreInfluencer {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--text-color);
 }
 .patrocinadores__descripcion {
   font-size: 1.2rem;
   width: 100%;
   text-align: center;
+  color: var(--text-color);
 
 }
 /*En este keyframe lo que hacemos esque
@@ -508,8 +710,9 @@ imagenes que estaban ocultas por el overflow*/
   max-width: 25rem; /* Ancho máximo en pantallas más grandes */
   margin: 2rem auto; /* Centra el formulario horizontalmente */
   padding: 2rem; /* Relleno interno */
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--text-boton-sin-Pulsar);
   border-radius: 0.6rem; /* Bordes redondeados */
+
 }
 .contacto__titulo {
   display: block;
@@ -615,14 +818,17 @@ td {
 /*Devoluciones Seccion*/
 .motivos__listado {
   margin-left: 2rem;
+  color: var(--text-color);
 }
 .devolucion__informacion__descripcion {
   margin-left: 1rem;
+  color: var(--text-color);
 
 }
 /*Devoluciones proceso Seccion*/
 .atencionCliente__listado {
   margin-left: 2rem;
+  color: var(--text-color);
 }
 
 /*Formulario*/
@@ -635,6 +841,7 @@ td {
 }
 .formulario__titulo {
   font-size: 1.6rem;
+  color: var(--text-color);
 }
 .devoluciones__informacion{
   display: flex;
@@ -661,6 +868,7 @@ td {
   font-size: 3rem;
   text-align: center;
   width: 100%;
+  color: var(--text-color);
 }
 
 .devoluciones__alinear{
@@ -745,6 +953,9 @@ td {
   width: 80%;
   align-content: center;
   margin: 1rem auto;
+}
+.proceso__titulo{
+  color: var(--backgrond-color);
 }
 
 /* Media Queries */
@@ -895,6 +1106,7 @@ td {
   }
   .devolucion__informacion__titulo{
     font-size: 4.5vw;
+    color: var(--backgrond-color);
   }
   .formulario__titulo{
     text-align: center;
@@ -962,4 +1174,6 @@ td {
   .patrocinadores__titulo{
     font-size: 7vw;
   }
+
+
 }

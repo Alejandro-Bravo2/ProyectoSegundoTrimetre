@@ -16,7 +16,9 @@
         />
     </a>
     <article class="cabecera__zona">
+
         <form class="cabecera__formulario">
+
             <input
                     class="formulario__input"
                     type="text"
@@ -30,6 +32,8 @@
                 <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
                 <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
                 <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+                <li><p id="boton__cambiar__color__tema">☀︎</p></li>
+
 
             </ul>
         </nav>
@@ -43,6 +47,7 @@
                 alt="LOGO TIENDA"
         />
     </a>
+
     <input type="checkbox" id="menu" class="cabecera__movil__entrada" />
     <label for="menu" class="cabecera__movil__menu">☰</label>
     <nav class="cabecera__movil__zona">
@@ -51,21 +56,71 @@
             <li><a class="movil__menu__enlace" href="tienda.html">Tienda</a></li>
             <li><a class="movil__menu__enlace" href="devoluciones.html">Devoluciones</a></li>
             <li><a class="movil__menu__enlace" href="contacto.html">Contacto</a></li>
+            <li><p id="boton__cambiar__color__tema__desplegable">☀︎</p></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <section>
-        <h1>Filtrar contenido</h1>
-        <section>
-            <label>Precio</label>
+    <section class="agregar__producto">
+        <h1 class="agregar__producto__titulo">Agregar producto</h1>
+        <article class="agregar__producto__datos">
+            <label class="agregar__producto__titulo__seccion">Nombre</label>
+            <p id="agregar__producto__nombre__error"></p>
+            <input type="text" placeholder="Nombre producto" id="agregar__producto__nombre" />
+        </article>
+        <article class="agregar__producto__datos">
+            <label class="agregar__producto__titulo__seccion">Precio</label>
+            <p id="agregar__producto__precio__error"></p>
+            <input type="number" placeholder="Precio producto" min="0" id="agregar__producto__precio" />
+        </article>
+        <article class="agregar__producto__datos">
+            <label class="agregar__producto__titulo__seccion">Tipo producto</label>
+            <p id="agregar__producto__tipo__error"></p>
+            <select id="agregar__producto__tipo">
+                <option value="sudadera">Sudaderas</option>
+                <option value="camiseta">Camisetas</option>
+                <option value="zapato">Zapatos</option>
+            </select>
+        </article>
+        <article class="agregar__producto__imagen">
+            <label  class="agregar__producto__titulo__seccion" id="agregar__producto__label" for="agregar__producto__entrada">Selecciona la imagen del producto</label>
+            <input type="file" id="agregar__producto__entrada" name="image" accept="image/jpeg, image/webp" required/>
+        </article>
+        <button id="agregar__producto__boton">Agregar</button>
 
-
-        </section>
     </section>
-    <section class="seccion__ropa"> <!-- Seccion para las ropas-->
-        <h2 class="ropa__titulo">Sudaderas</h2>
+
+
+    <section class="filtros">
+        <h1 class="titulo__filtros">Filtros</h1>
+
+        <article class="filtros__ropa__tienda">
+            <label class="filtros__ropa__titulo">Ropa</label>
+            <select class="filtros__ropa_desplegable" name="filtros__ropa__nombre" id="filtros__ropa__id">
+            <option value="filtros__ropa__todos">Todos</option>
+                <option value="filtros__ropa__sudadera">Sudaderas</option>
+                <option value="filtros__ropa__camisetas">Camisetas</option>
+                <option value="filtros__ropa__zapatos">Zapatos</option>
+            </select>
+        </article>
+
+        <article class="filtros__precio__tienda">
+            <label class="filtros__precio__titulo">Precio</label>
+            <select class="filtros__precio_desplegable" name="filtros__precio__nombre" id="filtros__precio__id">
+            <option value="filtros__precio__todos">Todos</option>
+                <option value="filtros__precio__bajo">10-30</option>
+                <option value="filtros__precio__medio">30-50</option>
+                <option value="filtros__precio__alto">50-*</option>
+            </select>
+        </article>
+
+        <button type="submit" id="filtros__boton" >Buscar</button>
+
+
+    </section>
+    <section class="seccion__ropa" id="seccion__sudaderas__id"> <!-- Seccion para las ropas-->
+        <h2 class="ropa__titulo" id="titulo__ropa__id">Sudaderas</h2>
         <section class="contenedor__ropa" id="link__sudaderas"> <!-- Dentro de cada viñeta lo he divido por foto, nombre y precio y añadir al carrito -->
             <article class="ropa">
                 <article class="ropa__imagen">
@@ -73,7 +128,7 @@
                     <img src="assets/img/sudaderaHombreEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Sudadera Hombre</h2>
+                    <h2 class="subtitulo__ropa__informacion">Sudadera Hombre</h2>
                     <p class="precio">45$</p>
                     <button>Añadir al carrito</button>
                 </article>
@@ -85,7 +140,7 @@
                     <img src="assets/img/sudaderaMujerEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Sudadera Mujer</h2>
+                    <h2 class="subtitulo__ropa__informacion">Sudadera Mujer</h2>
                     <p class="precio">41$</p>
                     <button>Añadir al carrito</button>
                 </article>
@@ -98,15 +153,15 @@
                     <img src="assets/img/sudaderaHombre2Espalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Traje Chaqueta</h2>
+                    <h2 class="subtitulo__ropa__informacion">Traje Chaqueta</h2>
                     <p class="precio">120$</p>
                     <button>Añadir al carrito</button>
                 </article>
             </article>
         </section>
     </section>
-    <section class="camisetas">
-        <h2 class="ropa__titulo">Camisetas</h2>
+    <section class="camisetas" id="seccion__camisetas">
+        <h2 class="ropa__titulo" id="titulo__camisetas__id">Camisetas</h2>
         <section class="contenedor__ropa" id="link__camisetas">
             <article class="ropa">
                 <article class="ropa__imagen">
@@ -114,7 +169,7 @@
                     <img src="assets/img/camisetaHombre.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Camiseta blanca</h2>
+                    <h2 class="subtitulo__ropa__informacion">Camiseta blanca</h2>
                     <p class="precio">12$</p>
                     <button>Añadir al carrito</button>
                 </article>
@@ -126,7 +181,7 @@
                     <img src="assets/img/camisetaMujerEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Camiseta blanca mujer </h2>
+                    <h2 class="subtitulo__ropa__informacion">Camiseta blanca mujer </h2>
                     <p class="precio">41$</p>
                     <button>Añadir al carrito</button>
                 </article>
@@ -139,15 +194,15 @@
                     <img src="assets/img/camisetaAzulEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Camiseta azul marino</h2>
+                    <h2 class="subtitulo__ropa__informacion">Camiseta azul marino</h2>
                     <p class="precio">120$</p>
                     <button>Añadir al carrito</button>
                 </article>
             </article>
         </section>
     </section>
-    <section class="zapatos">
-        <h2 class="ropa__titulo">Zapatos</h2>
+    <section class="zapatos" id="seccion__zapatos">
+        <h2 class="ropa__titulo" id="titulo__zapatos__id">Zapatos</h2>
         <section class="contenedor__ropa" id="link__zapatos">
             <article class="ropa">
                 <article class="ropa__imagen">
@@ -155,7 +210,7 @@
                     <img src="assets/img/zapatoMujerEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Mocasines</h2>
+                    <h2 class="subtitulo__ropa__informacion">Mocasines</h2>
                     <p class="precio">39$</p>
                     <button>Añadir al carrito</button>
                 </article>
@@ -167,7 +222,7 @@
                     <img src="assets/img/zapatoHombre2Espalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Calzado</h2>
+                    <h2 class="subtitulo__ropa__informacion">Calzado</h2>
                     <p class="precio">95$</p>
                     <button>Añadir al carrito</button>
                 </article>
@@ -180,7 +235,7 @@
                     <img src="assets/img/zapatoHombreEspalda.webp" alt="foto de tacón" class="ropa__imagen__articulo__oculto">
                 </article>
                 <article class="ropa__informacion">
-                    <h2>Zapatos</h2>
+                    <h2 class="subtitulo__ropa__informacion">Zapatos</h2>
                     <p class="precio">74$</p>
                     <button>Añadir al carrito</button>
                 </article>
@@ -215,8 +270,9 @@
         </ul>
     </nav>
 </footer>
-<script src="js/cambioProductos.js"></script>
+<!-- <script src="js/cambioProductos.js"></script> -->
 <script src="js/ocultarContenido.js"></script>
+<script src="js/cambiarColorWeb.js"></script>
 
 </body>
 </html>

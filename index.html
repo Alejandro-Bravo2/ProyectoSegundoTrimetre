@@ -7,51 +7,61 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header class="cabecera">
-        <a href="index.html">
-            <img
-                    class="cabecera__logo"
-                    src="assets/img/logo.jpg"
-                    alt="LOGO TIENDA"
-            />
-        </a>
-        <article class="cabecera__zona">
-            <form class="cabecera__formulario">
-                <input class="formulario__input" type="text" placeholder="Buscar contenido..."/>
-                <button class="formulario__boton" type="submit">buscar</button>
-            </form>
-            <nav>
-                <ul class="cabecera__zona__menu">
-                    <li><a class="menu__enlace" href="index.html">Inicio</a></li>
-                    <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
-                    <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
-                    <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+<header class="cabecera">
+    <a href="index.html">
+        <img
+                class="cabecera__logo"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
+    <article class="cabecera__zona">
 
-                </ul>
-            </nav>
-        </article>
-    </header>
-    <header class="cabecera__movil">
-        <a href="index.html">
-            <img
-                    class="cabecera_movil_logo"
-                    src="assets/img/logo.jpg"
-                    alt="LOGO TIENDA"
+        <form class="cabecera__formulario">
+
+            <input
+                    class="formulario__input"
+                    type="text"
+                    placeholder="Buscar contenido..."
             />
-        </a>
-        <input type="checkbox" id="menu" class="cabecera__movil__entrada" />
-        <label for="menu" class="cabecera__movil__menu">☰</label>
-        <nav class="cabecera__movil__zona">
-            <ul class="movil__zona__menu">
-                <li><a class="movil__menu__enlace" href="index.html">Inicio</a></li>
-                <li><a class="movil__menu__enlace" href="tienda.html">Tienda</a></li>
-                <li><a class="movil__menu__enlace" href="devoluciones.html">Devoluciones</a></li>
-                <li><a class="movil__menu__enlace" href="contacto.html">Contacto</a></li>
+            <button class="formulario__boton" type="submit">Buscar</button>
+        </form>
+        <nav>
+            <ul class="cabecera__zona__menu">
+                <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+                <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
+                <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
+                <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+                <li><p id="boton__cambiar__color__tema">☀︎</p></li>
+
+
             </ul>
         </nav>
-    </header>
+    </article>
+</header>
+<header class="cabecera__movil">
+    <a href="index.html">
+        <img
+                class="cabecera_movil_logo"
+                src="assets/img/logo.jpg"
+                alt="LOGO TIENDA"
+        />
+    </a>
 
+    <input type="checkbox" id="menu" class="cabecera__movil__entrada" />
+    <label for="menu" class="cabecera__movil__menu">☰</label>
+    <nav class="cabecera__movil__zona">
+        <ul class="movil__zona__menu">
+            <li><a class="movil__menu__enlace" href="index.html">Inicio</a></li>
+            <li><a class="movil__menu__enlace" href="tienda.html">Tienda</a></li>
+            <li><a class="movil__menu__enlace" href="devoluciones.html">Devoluciones</a></li>
+            <li><a class="movil__menu__enlace" href="contacto.html">Contacto</a></li>
+            <li><p id="boton__cambiar__color__tema__desplegable">☀︎</p></li>
+        </ul>
+    </nav>
+</header>
     <main>
+
         <section class="principal"> <!--Sección para explicar un poco sobre la página -->
             <article class="principal__sobreNosotros"> <!-- Article para agrupar la seccion de nuestros datos -->
                 <h2>Acerca de vistebarato</h2>
@@ -120,5 +130,7 @@
         </nav>
     </footer>
 <script src="js/inicioTemporadas.js"></script>
+    <script src="js/cambiarColorWeb.js"></script>
+
 </body>
 </html>

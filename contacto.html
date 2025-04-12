@@ -16,13 +16,15 @@
         />
     </a>
     <article class="cabecera__zona">
+
         <form class="cabecera__formulario">
+
             <input
                     class="formulario__input"
                     type="text"
                     placeholder="Buscar contenido..."
             />
-            <button class="formulario__boton" type="submit">buscar</button>
+            <button class="formulario__boton" type="submit">Buscar</button>
         </form>
         <nav>
             <ul class="cabecera__zona__menu">
@@ -30,6 +32,9 @@
                 <li><a class="menu__enlace" href="tienda.html">Tienda</a></li>
                 <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
                 <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
+                <li><p id="boton__cambiar__color__tema">☀︎</p></li>
+
+
             </ul>
         </nav>
     </article>
@@ -42,6 +47,7 @@
                 alt="LOGO TIENDA"
         />
     </a>
+
     <input type="checkbox" id="menu" class="cabecera__movil__entrada" />
     <label for="menu" class="cabecera__movil__menu">☰</label>
     <nav class="cabecera__movil__zona">
@@ -50,11 +56,12 @@
             <li><a class="movil__menu__enlace" href="tienda.html">Tienda</a></li>
             <li><a class="movil__menu__enlace" href="devoluciones.html">Devoluciones</a></li>
             <li><a class="movil__menu__enlace" href="contacto.html">Contacto</a></li>
+            <li><p id="boton__cambiar__color__tema__desplegable">☀︎</p></li>
         </ul>
     </nav>
 </header>
-
 <main>
+
     <section class="contacto"> <!--Seccion del formulario de contacto-->
         <article class="articulo__formulario__contacto">
             <form class="formulario__contacto__formulario">
@@ -63,18 +70,24 @@
                 </header>
                 <br>
                 <label for="nombre" class="formulario__contacto__apartados">Nombre</label>
-                <input class="formulario__contacto" id="nombre" type="text" placeholder="Introduce tu nombre" required/> <!-- Tiene puesto required para que el usuario siempre tenga que introducir el dato-->
+                <p id="nombre__formulario__comprobar"></p>
+                <input class="formulario__contacto" id="nombre" type="text" placeholder="Introduce tu nombre" required/>
                 <label for="apellido"  class="formulario__contacto__apartados">Apellido</label>
+                <p id="apellido__formulario__comprobar"></p>
                 <input class="formulario__contacto" id="apellido" type="text" placeholder="Introduce tu apellido" required/>
                 <label for="email"  class="formulario__contacto__apartados">Email</label>
+                <p id="email__formulario__comprobar"></p>
                 <input class="formulario__contacto" id="email" type="email" placeholder="Introduce tu email" required/>
                 <label for="telefono"  class="formulario__contacto__apartados">Telefono</label>
+                <p id="telefono__formulario__comprobar"></p>
                 <input class="formulario__contacto" id="telefono" type="text" placeholder="Introduce tu telefono" required/>
                 <label for="fecha__nacimiento"  class="formulario__contacto__apartados">Fecha nacimiento</label>
+                <p id="fecha__nacimiento__comprobar"></p>
                 <input class="formulario__contacto" id="fecha__nacimiento" type="date" required>
                 <label for="genero"  class="formulario__contacto__apartados">Genero</label>
+                <p id="genero__formulario__comprobar"></p>
                 <input class="formulario__contacto" id="genero" type="text" placeholder="Introduce tu genero" required>
-                <button type="submit" class="boton__contacto">Enviar</button>
+                <button type="submit" class="boton__contacto" id="formulario__boton__enviar">Enviar</button>
             </form>
         </article>
     </section>
@@ -163,5 +176,8 @@
     </nav>
 </footer>
 <script src="js/estilosImagenesPatrocinadores.js"></script>
+<script src="js/controlFormulario.js"></script>
+<script src="js/cambiarColorWeb.js"></script>
+
 </body>
 </html>

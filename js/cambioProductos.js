@@ -70,7 +70,6 @@ function agregarSudadera(){
 function agregarSombreadoAImagenes(){
     let imagenes = document.getElementsByClassName("ropa__imagen__articulo")
     //selector para seleccionar por nombre de clase
-    console.log(imagenes)
     for (let iterador = 0; iterador < imagenes.length; iterador++) {
         let camisaConcreta = imagenes[iterador]
         camisaConcreta.style.boxShadow = "2rem 2rem 2rem rgba(0,0,0,3)"
