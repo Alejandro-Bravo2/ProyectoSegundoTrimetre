@@ -37,3 +37,23 @@ borrar sus productos. Y lo que he hecho es borrar directamente el producto del L
 para que no salga el producto borrado.
 
 ##### Código con el que se ha realizado esta función:
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/9b168560d1544159d11af600bf02216031a21705/js/ocultarContenido.js#L1-L99
+
+
+### Filtrado
+Esta función lo que permite es filtrar los productos de la página web. Por tipo o precio.
+Se ha realizado esta función realizando un filtrado de todos los elementos del html y quedandose el programa
+unicamente con los que cumplan la condición. Y los demás los oculta.
+
+##### Código con el que se ha realizado esta función:
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/9b168560d1544159d11af600bf02216031a21705/js/ocultarContenido.js#L100-L227
+
+
+### Cambios de color de la página web
+Esta función lo que permite es cambiarle el color a toda la página web intercalando entre tonos claros y oscuros.
+La opción escogida se guardará en el localStorage para que se guarde la configuración.
+
+##### Código con el que se ha realizado esta función:
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/9b168560d1544159d11af600bf02216031a21705/js/cambiarColorWeb.js#L1-L30
+
+
