@@ -33,6 +33,7 @@
                 <li><a class="menu__enlace" href="devoluciones.html">Devoluciones</a></li>
                 <li><a class="menu__enlace" href="contacto.html">Contacto</a></li>
                 <li><p id="boton__cambiar__color__tema">☀︎</p></li>
+                <li><p class="boton__carrito">🛒</p></li>
 
 
             </ul>
@@ -57,31 +58,43 @@
             <li><a class="movil__menu__enlace" href="devoluciones.html">Devoluciones</a></li>
             <li><a class="movil__menu__enlace" href="contacto.html">Contacto</a></li>
             <li><p id="boton__cambiar__color__tema__desplegable">☀︎</p></li>
+            <li><p class="boton__carrito" id="boton__carrito__movil">🛒</p></li>
         </ul>
     </nav>
 </header>
 
 <main>
+    <section id="carrito">
+        <h2>Carrito</h2>
+        <ul class="carrito__lista">
+
+        </ul>
+        <p>------------</p>
+        <p id="carrito__precio__total">Precio total</p>
+    </section>
+
+
     <section class="agregar__producto">
         <h1 class="agregar__producto__titulo">Agregar producto</h1>
         <article class="agregar__producto__datos">
             <label class="agregar__producto__titulo__seccion">Nombre</label>
-            <p id="agregar__producto__nombre__error"></p>
             <input type="text" placeholder="Nombre producto" id="agregar__producto__nombre" />
+            <p id="agregar__producto__nombre__error"></p>
         </article>
         <article class="agregar__producto__datos">
             <label class="agregar__producto__titulo__seccion">Precio</label>
-            <p id="agregar__producto__precio__error"></p>
             <input type="number" placeholder="Precio producto" min="0" id="agregar__producto__precio" />
+            <p id="agregar__producto__precio__error"></p>
         </article>
         <article class="agregar__producto__datos">
             <label class="agregar__producto__titulo__seccion">Tipo producto</label>
-            <p id="agregar__producto__tipo__error"></p>
             <select id="agregar__producto__tipo">
                 <option value="sudadera">Sudaderas</option>
                 <option value="camiseta">Camisetas</option>
                 <option value="zapato">Zapatos</option>
             </select>
+            <p id="agregar__producto__tipo__error"></p>
+
         </article>
         <article class="agregar__producto__imagen">
             <label  class="agregar__producto__titulo__seccion" id="agregar__producto__label" for="agregar__producto__entrada">Selecciona la imagen del producto</label>
@@ -130,7 +143,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Sudadera Hombre</h2>
                     <p class="precio">45$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="45">Añadir al carrito</button>
                 </article>
             </article>
 
@@ -142,7 +155,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Sudadera Mujer</h2>
                     <p class="precio">41$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="41">Añadir al carrito</button>
                 </article>
             </article>
 
@@ -155,7 +168,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Traje Chaqueta</h2>
                     <p class="precio">120$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="120">Añadir al carrito</button>
                 </article>
             </article>
         </section>
@@ -171,7 +184,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Camiseta blanca</h2>
                     <p class="precio">12$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="12">Añadir al carrito</button>
                 </article>
             </article>
 
@@ -183,7 +196,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Camiseta blanca mujer </h2>
                     <p class="precio">41$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="41">Añadir al carrito</button>
                 </article>
             </article>
 
@@ -196,7 +209,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Camiseta azul marino</h2>
                     <p class="precio">120$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="120">Añadir al carrito</button>
                 </article>
             </article>
         </section>
@@ -212,7 +225,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Mocasines</h2>
                     <p class="precio">39$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="39">Añadir al carrito</button>
                 </article>
             </article>
 
@@ -224,7 +237,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Calzado</h2>
                     <p class="precio">95$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="95">Añadir al carrito</button>
                 </article>
             </article>
 
@@ -237,7 +250,7 @@
                 <article class="ropa__informacion">
                     <h2 class="subtitulo__ropa__informacion">Zapatos</h2>
                     <p class="precio">74$</p>
-                    <button>Añadir al carrito</button>
+                    <button class="agregar__al__carrrito" data-precio="74">Añadir al carrito</button>
                 </article>
             </article>
         </section>
