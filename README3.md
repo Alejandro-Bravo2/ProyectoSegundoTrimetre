@@ -20,8 +20,7 @@ Para implementar esta funcionalidad, se ha utilizado el almacenamiento local (lo
 El funcionamiento de esta función consiste en capturar la URL de la imagen del producto y convertirla a base64. Esto se debe a que la URL generada inicialmente es temporal y no sería válida tras recargar la página. Además, se almacenan el nombre y el precio del producto en el localStorage, para posteriormente recuperarlos y mostrarlos.
 
 ##### Código fuente:
-https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/ef23f7825f5d2d48a522cab73b5169a9fd02e55b/js/ocultarContenido.js#L252-L404
-
+https://github.com/Alejandro-Bravo2/ProyectoSegundoTrimetre/blob/032f08edeb34ef166763e550544a6755acf3d241/js/ocultarContenido.js#L229-L401
 
 ### Carrito
 
