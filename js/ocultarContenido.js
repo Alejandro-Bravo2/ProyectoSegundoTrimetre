@@ -226,7 +226,6 @@ botonFiltrado.addEventListener("click", (event) => {
     }
 });
 
-// ***** VALIDACIÓN EN TIEMPO REAL (cambios mínimos) *****
 const nombreInput = document.getElementById('agregar__producto__nombre');
 const precioInput = document.getElementById('agregar__producto__precio');
 const nombreError = document.getElementById('agregar__producto__nombre__error');
@@ -247,12 +246,10 @@ precioInput.addEventListener("input", function() {
         precioError.textContent = '';
     }
 });
-// ******************************************************
 
 let botonAgregarProducto = document.getElementById("agregar__producto__boton");
 botonAgregarProducto.addEventListener("click", (event) => {
     const agregarProductoBoton = document.getElementById('agregar__producto__boton');
-    // Se obtienen de nuevo los elementos pero sin afectar las validaciones en tiempo real
     const nombreInput = document.getElementById('agregar__producto__nombre');
     const precioInput = document.getElementById('agregar__producto__precio');
     const tipoSelect = document.getElementById('agregar__producto__tipo');
